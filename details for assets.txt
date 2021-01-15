@@ -1,0 +1,24 @@
+Edit file "/layouts/theme.config.php" in template "sport.ak".
+
+
+
+
+
+add below text in bottom (but above //internet explorer)
+
+
+$app    = JFactory::getApplication();
+$pathtemplate   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
+
+
+//Report Incidents (JS)
+$head[] = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>';
+$head[] = '<script>var $ = jQuery.noConflict();</script>';
+$head[] = '<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>';
+$head[] = '<script src="'. $pathtemplate . 'assets_reportincidents/site.js?t'. strtotime("now") .'"></script>';
+$head[] = '<script src="'. $pathtemplate . 'assets_reportincidents/youtube.js?t'. strtotime("now") .'"></script>';
+$head[] = '<script src="'. $pathtemplate . 'assets_reportincidents/blockui.js?t'. strtotime("now") .'"></script>';
+$head[] = '<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />';
+$head[] = '<link href="'. $pathtemplate . 'assets_reportincidents/style.css?t'. strtotime("now") .'" rel="stylesheet" />';
+$head[] = '<link href="'. $pathtemplate . 'assets_reportincidents/alerts.css?t'. strtotime("now") .'" rel="stylesheet" />';
+$head[] = '<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">';
