@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Incident List" option="default">
+		<message>
+			<![CDATA[Grid listing with incidents!]]>
+		</message>
+	</layout>
+</metadata>

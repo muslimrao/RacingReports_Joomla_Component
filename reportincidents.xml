@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" client="site" method="upgrade">
+	<name>Report Incidents</name>
+	<author>Muslim Raza</author>
+	<creationDate>11/01/2012</creationDate>
+	<copyright>Copyright © 2021, MuslimRaza, All Rights Reserved.</copyright>
+	<license></license>
+	<authorEmail>fairsit.m@gmail.com</authorEmail>
+	<authorUrl>https://www.linkedin.com/in/muslim-raza-70105228/</authorUrl>
+	<version>3.0.0</version>
+	<description>Report Incidents: Where admin set penalties and give judgement over crashes.</description>
+	<files>
+		<filename component="com_reportincidents">reportincidents.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<folder>views/</folder>
+	</files>
+	<administration>
+		<menu link="option=com_reportincidents">Report Incidents</menu>
+	    <files>
+	    	<filename component="com_reportincidents">reportincidents.php</filename>
+	    </files>
+	</administration>
+</extension>
