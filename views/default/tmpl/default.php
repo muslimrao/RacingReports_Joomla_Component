@@ -32,7 +32,6 @@ if (false) {
 	<!-- Report Incidents 3.0.0 ends here -->
 <?php
 }
-
 ?>
 
 <div class="bodyinci">
@@ -41,87 +40,10 @@ if (false) {
 
 	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="tableinci">
 
-		<!--
-        <tr>
-            <td>
-			   
-			   
-                <select name="category" class="form-control">
-                    <option value="">Select Category</option>
-                </select>
-                <br>
-
-            </td>
-
-            <td></td>
-            <td><select name="track" class="form-control">
-                    <option value="">Select Track</option>
-     
-                </select>
-                <br>
-
-            </td>
-        </tr>
-        
-        <tr>
-            <td height="10" colspan="3"></td>
-        </tr>
-           
-        <tr>
-            <td colspan="">
-                <h1 class="">Victim</h1>
-            </td>
-            <td colspan="">
-
-            </td>
-            <td colspan="">
-                <h1 class="">Guilty</h1>
-            </td>
-
-        </tr>
-        <tr>
-            <td height="10" colspan="3"></td>
-        </tr>
-     -->
-
-		<tr>
-			<td width="45%">
-
-
-				<div class="show_victim_dropdown" style="display: none;">
-					<select name="victim_racer" data-type="v" class="form-control">
-						<option value="">Select a racer video</option>
-
-					</select>
-
-				</div>
-
-				<br>
-
-			</td>
-
-			<td width="10%"></td>
-			<td width="45%">
-
-				<?php
-
-				$fetch_guilty_racer       = mysqli_query(UtilHelper::getMySql_Connection(), "select  DISTINCT(Reportado) from incidentes where Reportado IN (select DISTINCT(Piloto) FROM `parc_ferme`)");
-				?>
-
-				<div class="show_guilty_dropdown">
-					<select name="select_guilty_racer" data-type="g">
-						<option value="">Select a racer video</option>
-
-					</select>
-				</div>
-
-
-			</td>
-		</tr>
-
 		<tr>
 			<td height="10" colspan="3"></td>
 		</tr>
+
 
 		<tr style="background-color: black;">
 			<td width="45%" align="center">
@@ -198,6 +120,26 @@ if (false) {
 
 		<tr style="background-color: black; color:white; text-align:left" class="verticalalign-top">
 			<td width="45%">
+
+			</td>
+
+			<td width="10%">
+
+			</td>
+
+
+			<td width="45%">
+				<div class="show_guilty_dropdown">
+					<select name="select_guilty_racer" data-type="g">
+						<option value="">Select a racer video</option>
+					</select>
+				</div>
+			</td>
+		</tr>
+
+
+		<tr style="background-color: black; color:white; text-align:left" class="verticalalign-top">
+			<td width="45%">
 				<div class="div_victim_guilty_names">
 					<h1 class=""> Victim: </h1>
 					<h1 class="span_victim_name"></h1>
@@ -207,6 +149,7 @@ if (false) {
 			<td width="10%">
 
 			</td>
+
 
 
 			<td width="45%">
@@ -346,6 +289,10 @@ if (false) {
 			<td width="45%">
 
 				<?php echo DropdownHelper::track_dropdown_HTML(); ?>
+
+				<div class="show_pdf_export">
+					<button>Export PDF</button>
+				</div>
 
 			</td>
 		</tr>

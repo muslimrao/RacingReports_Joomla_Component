@@ -45,6 +45,7 @@ class ReportIncidentsController extends JControllerLegacy
 		$assets = UtilHelper::load_assets();
 		$view->document->addScriptDeclaration($assets["inline_js"]);
 
+		/*
 		if (@$_SERVER['HTTP_HOST'] == 'localhost') {
 			foreach ($assets["css"] as $css) {
 				$view->document->addStyleSheet($css);
@@ -54,7 +55,7 @@ class ReportIncidentsController extends JControllerLegacy
 				$view->document->addScript($js);
 			}
 		}
-
+		*/
 
 		$view->display();
 	}
@@ -83,6 +84,12 @@ class ReportIncidentsController extends JControllerLegacy
 	public function get_juez()
 	{
 		$view = $this->getView('get_juez', 'raw');
+		$view->display();
+	}
+
+	public function table_pdf()
+	{
+		$view = $this->getView('table_pdf', 'raw');
 		$view->display();
 	}
 
